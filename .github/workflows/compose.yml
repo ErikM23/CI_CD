@@ -1,9 +1,12 @@
 name: Run compose
-on: [push]
+
+on: push
+
 jobs:
-  run-compose:
-    runs-on: ubuntu-latest
-    steps:
+  run-test:
+    name: run compose
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Start containers
